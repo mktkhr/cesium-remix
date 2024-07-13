@@ -23,7 +23,7 @@ export const action = async () => {
 
 import type { LinksFunction } from "@remix-run/node";
 
-import appStylesHref from "./app.css?url";
+import appStylesHref from "./app.scss?url";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: appStylesHref },
