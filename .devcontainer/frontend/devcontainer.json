@@ -1,0 +1,53 @@
+{
+  "name": "Frontend DevContainer",
+  "dockerComposeFile": "compose.yaml",
+  "service": "remix-node",
+  "workspaceFolder": "/frontend",
+  "postCreateCommand": "yarn && yarn dev",
+  "features": {
+    "node": {
+      "version": "v20.14.0"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "eslint.nodePath": "./node_modules",
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "cSpell.files": [
+          "!package.json"
+        ],
+        "[javascript]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+          "editor.formatOnSave": true
+        },
+        "[typescript]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+          "editor.formatOnSave": true
+        },
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": "explicit",
+          "source.organizeImports": "explicit"
+        },
+        "typescript.updateImportsOnFileMove.enabled": "always",
+        "files.associations": {
+          ".env.*": "properties"
+        }
+      },
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "dsznajder.es7-react-js-snippets",
+        "esbenp.prettier-vscode",
+        "mhutchie.git-graph",
+        "eamodio.gitlens",
+        "usernamehw.errorlens",
+        "oderwat.indent-rainbow",
+        "aaron-bond.better-comments",
+        "streetsidesoftware.code-spell-checker",
+        "visualstudioexptteam.vscodeintellicode",
+      ]
+    }
+  },
+  "remoteUser": "node"
+}
