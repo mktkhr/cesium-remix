@@ -1,0 +1,19 @@
+name: ems-remix
+
+services:
+  remix-node:
+    image: node:${NODE_VERSION}
+    container_name: remix-node
+    tty: true
+    volumes:
+      - type: bind
+        source: ../../frontend
+        target: /frontend
+    user: node
+    networks:
+      - ems-remix-network
+
+networks:
+  ems-remix-network:
+    name: ems-remix-network
+    driver: bridge
